@@ -1,0 +1,23 @@
+{
+  "name": "@diegomais/blog-posts",
+  "version": "1.0.0",
+  "description": "Blog app using Microservices",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegomais/microservices-blog.git",
+    "directory": "posts"
+  },
+  "keywords": [
+    "microservices"
+  ],
+  "author": "Diego Mais <diegomais.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegomais/microservices-blog/issues"
+  },
+  "homepage": "https://github.com/diegomais/microservices-blog#readme"
+}
