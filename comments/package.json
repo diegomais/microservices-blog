@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/diegomais/microservices-blog/issues"
   },
-  "homepage": "https://github.com/diegomais/microservices-blog#readme"
+  "homepage": "https://github.com/diegomais/microservices-blog#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
