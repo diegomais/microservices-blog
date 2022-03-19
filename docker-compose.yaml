@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+      target: deps
+    command: npm start
+    container_name: blog-client
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client/:/app/
+      - /app/node_modules/
+
+  comments:
+    build:
+      context: ./comments
+      target: deps
+    command: npm start
+    container_name: blog-comments-api
+    ports:
+      - 4002:4002
+    volumes:
+      - ./comments/:/app/
+      - /app/node_modules/
+
+  posts:
+    build:
+      context: ./posts
+      target: deps
+    command: npm start
+    container_name: blog-posts-api
+    ports:
+      - 4001:4001
+    volumes:
+      - ./posts/:/app/
+      - /app/node_modules/
