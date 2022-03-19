@@ -1,5 +1,5 @@
 {
-  "name": "@diegomais/blog-posts",
+  "name": "@diegomais/blog-event-bus",
   "version": "1.0.0",
   "description": "Blog app using Microservices",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diegomais/microservices-blog.git",
-    "directory": "posts"
+    "directory": "event-bus"
   },
   "keywords": [
     "microservices"
