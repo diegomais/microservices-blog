@@ -25,6 +25,18 @@ services:
       - ./comments/:/app/
       - /app/node_modules/
 
+  event-bus:
+    build:
+      context: ./event-bus
+      target: deps
+    command: npm start
+    container_name: blog-event-bus-api
+    ports:
+      - 4000:4000
+    volumes:
+      - ./event-bus/:/app/
+      - /app/node_modules/
+
   posts:
     build:
       context: ./posts
