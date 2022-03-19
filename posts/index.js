@@ -1,3 +1,4 @@
+const axios = require('axios').default;
 const cors = require('cors');
 const { randomBytes } = require('crypto');
 const express = require('express');
@@ -13,11 +14,21 @@ app.get('/posts', (req, res) => {
   res.send(Object.values(posts));
 });
 
-app.post('/posts', (req, res) => {
+app.post('/posts', async (req, res) => {
   const id = randomBytes(4).toString('hex');
   const { title } = req.body;
   const post = { id, title };
   posts[id] = post;
+
+  try {
+    await axios.post('http://event-bus:4000/events', {
+      type: 'PostCreated',
+      payload: post,
+    });
+  } catch (error) {
+    console.log(error.message);
+  }
+
   res.status(201).send(post);
 });
 
